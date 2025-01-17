@@ -22,6 +22,668 @@ body {
 }
 
 
+/* Hero section styles */
+.hero-section {
+  position: relative;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #fff;
+  overflow: auto;
+   /* Enable scrolling */
+}
+
+/* Overlay for better text visibility */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Content style */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Breadcrumb and heading spacing */
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .heading {
+      font-size: 2rem;
+  }
+
+  .subheading {
+      font-size: 1rem;
+  }
+}
+
+
+/* Root variables for consistent color theming */
+:root {
+  --blue: #007bff;
+  --black: #000000;
+  --dark-gray: #1c1c1c;
+  --white: #ffffff;
+}
+
+/* Reset default styles and set base theme */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+
+/* ERP Services section styling */
+
+
+
+
+
+.erp-services {
+  padding: 40px 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Container modifications for proper spacing */
+.erp-services .container {
+  max-width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/* Section headings */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fffffff2
+}
+
+.section-description {
+  margin-bottom: 40px;
+  line-height: 1.5;
+  color: #ffffffcc
+}
+
+/* Cards container for horizontal scrolling */
+.cards-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+/* Wrapper for smooth card animation */
+.cards-wrapper {
+  display: flex;
+  gap: 30px;
+  transform: translateX(0);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+  padding: 20px;
+  width: 100vw;
+  align-items: center;
+  
+}
+
+/* Hide scrollbar while maintaining functionality */
+.cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card styling */
+.card {
+  flex: 0 0 auto;
+  width: 350px; /* Fixed width for the card */
+  height: 450px; /* Fixed height for the card */
+  background: var(--dark-gray);
+  border-radius: 12px;
+  padding: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto; /* Centers the card horizontally in its container */
+  overflow: hidden; /* Prevents overflowing content */
+  box-sizing: border-box; /* Includes padding in width and height */
+}
+
+/* Responsive Adjustments */
+
+
+
+/* Card hover effects */
+.card:hover {
+  background:#ffffffbe;
+  transform: scale(1.05);
+}
+.card:hover .card-title,
+.card:hover .card-description {
+  color: var(--black);
+}
+
+/* Icon styling within cards */
+.icon {
+  background: var(--black);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text elements within cards */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffffd1
+}
+
+.card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color:#ffffffd1
+}
+
+/* Utility class for blue background */
+.bg-blue {
+  background: var(--blue);
+}
+
+/* Responsive design adjustments */
+@media (min-width: 1024px) {
+  .card {
+      width: 400px;
+      padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust hero section text sizes */
+  .heading {
+      font-size: 2rem;
+  }
+
+  .subheading {
+      font-size: 1rem;
+  }
+
+  /* Modify container spacing */
+  .erp-services .container {
+      padding: 0 20px;
+  }
+
+  /* Adjust card container spacing */
+  .cards-container {
+      margin: 0 -10px;
+      padding: 0 10px;
+  }
+
+  /* Modify card sizes for smaller screens */
+  .card {
+      width: 300px;
+      padding: 30px;
+  }
+
+  /* Adjust section title size */
+  .section-title {
+      font-size: 2.5rem;
+  }
+}
+
+/* Additional responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  .card {
+      width: 280px;
+      padding: 25px;
+  }
+
+  .section-title {
+      font-size: 2rem;
+  }
+
+  .erp-services .container {
+      padding: 0 15px;
+  }
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background-color: #000; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.icon svg {
+  fill: #fff; 
+  width: 30px; /* Set the desired size */
+height: 30px;/* Change the color of the icon */
+}
+@media (max-width: 1024px) {
+  .card {
+      width: 300px; /* Adjust width for tablet view */
+      height: 400px; /* Adjust height for tablet view */
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%; /* Full width for very small screens */
+      height: 350px; /* Allow height to adjust for content */
+  }
+}
+
+
+/* Adjustments for card height and width on tablet (1024px) */
+@media (max-width: 1024px) {
+  .card {
+      width: 350px;  /* Adjust width for tablet view */
+      height: 400px;  /* Adjust height for tablet view */
+      padding: 30px;  /* Adjust padding to match new dimensions */
+  }
+
+  /* Adjust icon size on tablets */
+  .icon {
+      width: 50px;  /* Smaller icon size on tablet */
+      height: 50px;
+  }
+
+  .icon svg {
+      width: 25px;  /* Smaller icon size on tablet */
+      height: 25px;
+  }
+
+  /* Adjust text sizes on tablets */
+  .card-title {
+      font-size: 1.3rem; /* Decrease title size */
+  }
+
+  .card-description {
+      font-size: 0.9rem;  /* Decrease description size */
+  }
+
+  /* Adjust hero section text sizes */
+  .heading {
+      font-size: 2rem; /* Adjust heading for tablets */
+  }
+
+  .subheading {
+      font-size: 1rem; /* Adjust subheading for tablets */
+  }
+
+  /* Modify section title size for tablet */
+  .section-title {
+      font-size: 2.5rem; /* Adjust section title size */
+  }
+}
+
+/* Adjustments for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .card {
+      width: 90%; /* Full width for very small screens */
+      height: 350px; /* Adjust height for small screens */
+      padding: 25px;  /* Adjust padding */
+  }
+
+  .icon {
+      width: 40px; /* Smaller icon for very small screens */
+      height: 40px;
+  }
+
+  .icon svg {
+      width: 20px;  /* Adjust icon size for small screens */
+      height: 20px;
+  }
+
+  .card-title {
+      font-size: 1.2rem; /* Adjust font size for small screens */
+  }
+
+  .card-description {
+      font-size: 0.8rem;  /* Adjust font size for small screens */
+  }
+
+  .section-title {
+      font-size: 2rem; /* Adjust section title size */
+  }
+
+  /* Adjust hero section text sizes */
+  .heading {
+      font-size: 1.8rem; /* Adjust heading for small screens */
+  }
+
+  .subheading {
+      font-size: 0.9rem; /* Adjust subheading for small screens */
+  }
+}
+
+
+
+/* scroll card  */
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-card {
+  background-color: #1e1e1e;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+  height: 350px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: #f8f9fa;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white; /* Default color is white */
+}
+
+.card-text {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.carousel-indicators {
+  position: static;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.scroll-card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom right, #ffffff, #403f3f00); /* White to black gradient */
+  color: #000000; /* Text color to black on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+.scroll-card:hover .card-title {
+  color: black; /* Change card title to black on hover */
+}
+
+.carousel-indicators button {
+  width: 30px;
+  height: 5px;
+  background-color: #ffffff;
+  border: none;
+  margin: 0 5px;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .scroll-card {
+    max-width: 300px;
+    height: 280px;
+  }
+
+  .carousel-inner .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  .card-icon {
+    font-size: 2.2rem;
+  }
+
+  .scroll-card {
+    max-width: 280px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-card {
+    margin-bottom: 15px;
+  }
+
+  .carousel-inner .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.stats-section {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  height: 100%;
+}
+
+.stats-card {
+  background: linear-gradient(to bottom right, #040500, #295A57, #313C12);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1200px;
+  /* Removed max-height constraint to allow content to determine height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  /* Added padding for better spacing */
+  padding: 3rem 2rem;
+}
+.stats-section {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  height: 100%;
+}
+
+.stats-card {
+  background: linear-gradient(to bottom right, #040500, #295A57, #313C12);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  padding: 3rem 2rem;
+}
+
+.stats-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+.stat-card1{
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  color: white;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.stat-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.cta-button::after {
+  content: '→';
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .stats-section {
+    padding: 2rem 1rem;
+    height: auto;
+    min-height: auto;
+  }
+
+  .stats-card {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  /* Modified stats container for mobile layout */
+  .stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  /* Adjusted stat card width for two-per-row layout */
+  .stat-card {
+    flex: 0 0 calc(50% - 1rem); /* Takes up half the container width minus gap */
+    padding: 1rem;
+  }
+
+  /* Make the third stat card take full width */
+  .stat-card:last-child {
+    flex: 0 0 100%;
+    margin-top: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-description {
+    font-size: 1rem;
+  }
+
+  /* Adjusted button spacing */
+  .cta-button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: auto;
+  }
+}
+
+
+  /* Added space between stats in mobile view */
+  .stat-card:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  /* Adjusted button spacing for mobile */
+  .cta-button {
+    margin: 1rem 0;
+    /* Made button slightly smaller on mobile */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+
 
 /* 
 @media screen and (max-width:576px) {
