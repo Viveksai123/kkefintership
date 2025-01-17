@@ -47,3 +47,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial position check
     handleScroll();
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".swiper-container", {
+      slidesPerView: 3, // Show 3 logos at a time
+      spaceBetween: 10, // Space between logos
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 3, // Show 3 logos even on smaller devices
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 4, // Show 4 logos for larger screens
+        },
+      },
+    });
+  });
