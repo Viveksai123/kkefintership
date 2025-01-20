@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="nav.css" rel="stylesheet" />
+</head>
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-black">
+    <!-- Logo -->
+    <div class="col-12 d-flex flex-column align-items-start">
+        <img src="assets/blogs/logo.webp" alt="logo" class="img-fluid mb-5 mt-2" style="max-width: 120px;" />
+      </div>
+
+    <!-- Navigation Menu -->
+    <div class="hidden lg:flex items-center gap-8">
+      <!-- Dropdown Menu for "What we do" -->
+      <div class="relative">
+        <button
+          class="flex justify-center items-center text-white hover:text-purple-500 focus:outline-none"
+          id="dropdown-btn"
+        >
+          What we do
+          <svg
+            class="w-4 h-4 ml-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+        id="dropdown-menu"
+  class="hidden absolute left-0 bg-black border border-gray-700 py-2 px-4 space-y-2"
+>  <div class="dropdown">
+    <h2 class="title">What we do <span class="arrow">➔</span></h2>
+    <div class="dropdown-content">
+      <div class="column">
+        <h3>Capabilities</h3>
+        <ul>
+          <li>Cloud</li>
+          <li>Cybersecurity</li>
+          <li>Data and Artificial Intelligence</li>
+          <li>Digital Engineering and Manufacturing</li>
+          <li>Emerging Technology</li>
+          <li>Ecosystem Partners</li>
+          <li>Finance and Risk Management</li>
+          <li>Infrastructure and Capital Projects</li>
+          <li>Learning</li>
+          
+        </ul>
+      </div>
+      <div class="column ">
+        <ul>
+            <li>Marketing and Experience</li>
+          <li>Metaverse</li>
+          <li>Sales and Commerce</li>
+          <li>Strategic Managed Services</li>
+          <li>Strategy</li>
+          <li>Supply Chain</li>
+          <li>Sustainability</li>
+          <li>Talent and Organization</li>
+          <li>Technology Transformation</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Industries</h3>
+        <ul>
+          <li>Aerospace and Defense</li>
+          <li>Automotive</li>
+          <li>Banking</li>
+          <li>Capital Markets</li>
+          <li>Chemicals</li>
+          <li>Communications and Media</li>
+          <li>Consumer Goods and Services</li>
+          <li>Energy</li>
+          <li>Health</li>
+          <li>High Tech</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <!-- Links -->
+      <a href="#" class="text-white hover:text-purple-500">What we think</a>
+      <a href="#" class="text-white hover:text-purple-500">Who we are</a>
+      <a href="#" class="text-white hover:text-purple-500">Careers</a>
+    </div>
+
+    <!-- Contact Us & Country Selector -->
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="#" class="text-white hover:text-purple-500">Contact Us</a>
+      <select class="bg-black text-white border border-gray-600 rounded p-1">
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>Germany</option>
+      </select>
+    </div>
+
+    <!-- Hamburger Icon for Mobile -->
+    <div class="lg:hidden">
+      <button id="hamburger-btn" class="text-white focus:outline-none">
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu for Mobile -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50">
+    <div class="p-4 space-y-6">
+      <button id="close-btn" class="text-white">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+      <div class="space-y-4">
+        <div class="relative">
+          <button class="flex items-center text-white" id="mobile-dropdown-btn">
+            What we do
+            <svg
+              class="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            id="mobile-dropdown-menu"
+            class="hidden pl-4 pt-2"
+          >
+            <a href="#" class="block text-white hover:text-purple-500">Capabilities</a>
+            <a href="#" class="block text-white hover:text-purple-500">Industries</a>
+            <a href="#" class="block text-white hover:text-purple-500">Offerings</a>
+          </div>
+        </div>
+        <a href="#" class="block text-white">What we think</a>
+        <a href="#" class="block text-white">Who we are</a>
+        <a href="#" class="block text-white">Careers</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    // Desktop Dropdown Menu
+    const dropdownBtn = document.getElementById("dropdown-btn");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    dropdownBtn.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Mobile Hamburger and Dropdown Menu
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-btn");
+    const mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
+    const mobileDropdownMenu = document.getElementById("mobile-dropdown-menu");
+
+    hamburgerBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+
+    mobileDropdownBtn.addEventListener("click", () => {
+      mobileDropdownMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

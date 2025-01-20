@@ -1,0 +1,84 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100vw;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .title .arrow {
+    color: #a500ff;
+    font-size: 1.5rem;
+    margin-left: 8px;
+  }
+  
+  .content {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+  }
+  
+  .column {
+    flex: 1;
+  }
+  
+  .column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #b3b3b3;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .column li {
+    margin: 8px 0;
+  }
+  
+  .dropdown {
+    position: absolute; /* Ensure it's positioned relative to the page */
+    top: 100%; /* Adjust as per the dropdown's trigger */
+    left: 0; /* Align with the very left edge of the page */
+    width: 95vw; /* Full viewport width */
+    background-color: #121212;
+    padding: 20px 40px; /* Add padding for better spacing */
+    z-index: 10; /* Ensure it appears on top of other elements */
+    display: flex;
+    gap: 50px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-left: -27vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 4rem;
+  }
+  
+  .dropdown-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+  }
+  .logo{
+    
+  }
+
+  

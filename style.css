@@ -19,6 +19,7 @@ body {
 
 .footer-card{
   padding-left:5vw;
+  width: 98vw;
 }
 
 
@@ -121,6 +122,7 @@ body {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-top: 6vw;
   color: #fffffff2
 }
 
@@ -531,19 +533,7 @@ body {
   height: 100%;
 }
 
-.stats-card {
-  background: linear-gradient(to bottom right, #040500, #295A57, #313C12);
-  border-radius: 20px;
-  width: 100%;
-  max-width: 1200px;
-  /* Removed max-height constraint to allow content to determine height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-  /* Added padding for better spacing */
-  padding: 3rem 2rem;
-}
+
 .stats-section {
   background-color: #ffffff;
   padding: 4rem 2rem;
@@ -553,9 +543,17 @@ body {
   min-height: 300px;
   height: 100%;
 }
+.case-section {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  height: 100%;
+}
 
 .stats-card {
-  background: linear-gradient(to bottom right, #040500, #295A57, #313C12);
+  background: linear-gradient(to bottom right, #040500,#040500, #295A57, #313C12);
   border-radius: 20px;
   width: 100%;
   max-width: 1200px;
@@ -827,7 +825,33 @@ body {
 
 /* servies */
 
+.software-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #c0bebec9;
+  position: relative;
+}
+.software-con{
+  background-color: #000000;
+  /* border-radius: 10vh; */
+}
+.software-section {
+  background-color: #ffffff;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  height: 100%;
+}
 
+.sofware-spacing{
+  padding-left: 10vw;
+  padding-right: 5vw;
+  padding-bottom: 4vw;
+  margin-top: 6vw;
+  
+}
   *{
     margin: 0;
     padding: 0;
@@ -837,16 +861,29 @@ body {
     background-color: #000;
 }
 .services-container {
-    display: flex;
-    min-height: 400px;
-    max-width: 1200px;
-    margin: 2rem auto;
-    background: #000;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 10px 14px 15px rgba(248, 245, 245, 0.2);
-    margin-bottom:50px;
+  display: flex;
+  min-height: 400px;
+  max-width: 1000px; /* Reduced from 1200px to 1000px */
+  margin: 2rem auto;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 10px 14px 15px rgba(248, 245, 245, 0.2);
+  margin-bottom: 10vw;
 }
+
+.service-content {
+  padding: 2rem; /* Reduced from 3rem to 2rem */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem; /* Reduced from 1.5rem to 1rem */
+  flex: 1;
+  box-shadow: 0 0 15px rgba(247, 246, 246, 0.5);
+  background: #000;
+}
+
 
 .services-nav {
     background: #444;
@@ -860,7 +897,7 @@ body {
 }
 
 .services-nav::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
 }
 
 .services-nav::-webkit-scrollbar-thumb {
@@ -894,17 +931,7 @@ body {
     opacity: 0.5;
 }
 
-.service-content {
-    padding: 3rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    flex: 1;
-    box-shadow: 0 0 15px rgba(247, 246, 246, 0.5);
-    background: #000;
-}
+
 
 .service-icon {
     background: linear-gradient(135deg, #888, #666);
@@ -939,11 +966,63 @@ transition: all 0.3s ease; /* Smooth transition for the background */
     line-height: 1.6;
     opacity: 0.8;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .services-container {
+      margin-left: 4rem auto;
+      margin-right: 4rem auto;
+      box-shadow: 10px 14px 15px rgba(248, 245, 245, 0);
+
+  }
+
+  .services-nav {
+    background: #444;
+    padding: 0.5rem;
+    min-width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #999 #333;
+    margin-left: 1rem;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+    overflow-x: hidden;
+}
+
+  .service-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.service-description {
+    line-height:1rem;
+    opacity: 0.8;
+}
+  .service-content {
+      padding: 2.5rem; /* Slightly more padding for better spacing */
+  }
+}
 
 @media (max-width: 768px) {
+  .software-section {
+    background-color: #000000;
+    padding:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    height: 100%;
+  }
+  
+  .sofware-spacing{
+    padding-left: 10vw;
+    padding-right: 5vw;
+    padding-bottom: 4vw;
+    margin-top: 10vw;
+    
+  }
     .services-container {
         flex-direction: column;
         margin: 1rem;
+        margin-bottom: 5rem;
     }
 
     .services-nav {
@@ -1033,6 +1112,85 @@ transition: all 0.3s ease; /* Smooth transition for the background */
       }
     }
   
+    .faq-section {
+      padding: 40px 20px;
+      background-color: #f9f9ff;
+    }
+    
+    .faq-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 5vw;
+      color: #000000;
+    }
+    
+    .faq-card {
+      background-color: #0c0d0d;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .custom-accordion {
+      background-color: black;
+      padding: 20px;
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
+    }
+    
+    .accordion-item {
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .accordion-header.custom-accordion {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px; /* Adds border-radius to the header */
+      overflow: hidden;
+    }
+    
+    .accordion-button {
+      color: #e0e0e0;
+      background-color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .accordion-button:not(.collapsed) {
+      color: #e0e0e0;
+      background-color: #000;
+      border-radius: 0px;
+    }
+    
+    .accordion-button::after {
+      color: white; /* Makes the dropdown icon white */
+      transition: all 0.3s ease; /* Smooth transition for interactions */
+    }
+    
+    .accordion-button:not(.collapsed)::after {
+      transform: rotate(90deg); /* Rotates icon when expanded */
+    }
+    
+    .accordion-body.description-text {
+      background-color: grey;
+      color: #fff;
+      padding: 2.5vw;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .faq-heading {
+        font-size: 1.5rem;
+      }
+    
+      .faq-section {
+        padding: 40px 20px;
+      }
+    }
+    
+
 
 
 /* 
@@ -1673,9 +1831,12 @@ ul.no-padding {
 
 /* recent Happenings */
 
-
+.recent-happening-text{
+  color: #fff;
+}
 .recent-happenings-heading {
   font-size: 32px;
+  
 
 }
 
@@ -1706,26 +1867,41 @@ ul.no-padding {
 .recent-happenings-tab {
   height: 380px !important;
 }
-
+.recent-happenings-text{
+  color: black;
+}
 .recent-happenings-lg-image-section {
   height: 780px;
 }
 
+
 /* blogs-section */
+.blog-section {
+  background-color: #000; /* Black background for the section */
+  color: #fff; /* White text for contrast */
+}
+
 .blogs-top-section-heading {
   font-size: 38px;
+  font-family: 'Arial', sans-serif; /* Classic font */
+  color: #fff; /* White text for the heading */
 }
 
 .blogs-card-heading {
   font-weight: 550;
   font-size: 20px;
+  color: #333; /* Dark text for readability inside the card */
+  font-family: 'Georgia', serif; /* Classic serif font for blog titles */
 }
 
 .blogs-card-text {
   font-size: 18px;
+  color: #333; /* Dark text for body content */
+  line-height: 1.6; /* Better line spacing for readability */
 }
 
-@media screen and (min-width:576px) {
+/* Media Query for Mobile Screens */
+@media screen and (min-width: 576px) {
   .blogs-top-section-heading {
     font-size: 44px;
   }
@@ -1734,13 +1910,20 @@ ul.no-padding {
     font-weight: 550;
     font-size: 22px;
   }
+
+  .blogs-card-text {
+    font-size: 16px;
+  }
 }
 
-@media screen and (min-width:991px) {
-
+/* Media Query for Tablets and Larger Screens */
+@media screen and (min-width: 991px) {
   .blogs-card-heading {
-    font-weight: 550;
     font-size: 24px;
+  }
+
+  .blogs-card-text {
+    font-size: 18px;
   }
 }
 
@@ -1752,6 +1935,75 @@ ul.no-padding {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
+
+
+/* Card Styling */
+.bo-card {
+  background-color: #fff; /* Grey background for the cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #000; /* Dark text inside the card */
+  height: 100%;
+}
+
+.card-img-top {
+  width: 100%; /* Ensures the image spans the full width of the card */
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+  border-radius: 5px; /* Optional: Adds slight rounding to the image corners */
+}
+
+
+.date-section {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff; /* Dark color for the date */
+}
+
+.bo-card-body {
+  background-color: transparent; 
+  max-height: 350px;
+  min-height: 350px;
+}
+.bo-card:hover .bo-card-body {
+   /* Change the background of bo-card-body when bo-card is hovered */
+  color: #f1f1f1; /* Adjust the text color for visibility */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .blogs-top-section-heading {
+    font-size: 30px;
+  }
+
+  .blogs-card-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blogs-top-section-heading {
+    font-size: 24px;
+  }
+
+  .blogs-card-heading {
+    font-size: 18px;
+  }
+}
+
 
 
 
@@ -1859,3 +2111,4 @@ ul.no-padding {
 .animate-fadeInRight {
   animation: fadeInRight 1s ease-out forwards;
 }
+
