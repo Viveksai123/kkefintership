@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     /> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -18,364 +19,437 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
   <title>KKRF: A Leading Global Conglomerate Tech Firm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-light">
-  <!-- Navbar section-->
-  <!-- <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <header class="header-container">
-            <img
-              class="logo"
-              src="https://res.cloudinary.com/kamleshcloud/image/upload/v1732192524/WhatsApp_Image_2024-11-21_at_17.26.57_966d4cd4_f0kl4a.jpg"
-              alt="Logo"
-              width="80"
-            />
-            <nav class="nav-cont">
-            
-              <div class="nav-item">
-                <p id="what-we-do">
-                  What we do <i class="fa-solid fa-chevron-down"></i>
-                </p>
-                <div class="what-we-do-hover-cont">
-                  <h1 class="what-we-do-head">
-                    What we do
-                    <i
-                      class="fa-solid fa-chevron-right fs-4 bg-light text-black what-we-do-head-icon"
-                    ></i>
-                  </h1>
-                  <div class="what-we-do-flex">
-                    <div class="what-we-do-anchor-div">
-                      <h1>SOFTWARE DEVELOPMENT</h1>
-                      <a href="">ERP Software Development</a>
-                      <a href="">Custom CRM</a>
-                      <a href="">AR/VR Development</a>
-                      <a href="">IoT Development</a>
-                      <a href="">Microservices</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>CLOUD TECHNOLOGIES</h1>
-                      <a href="">Cloud</a>
-                      <a href="">Emerging Technology</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>DATA & INTELLIGENCE</h1>
-                      <a href="">Data and Artificial Intelligence</a>
-                      <a href="">Finance and Risk Management</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>BLOCKCHAIN SERVICES</h1>
-                      <a href="">NFT Marketplace</a>
-                      <a href="">Metaverse Development</a>
-                      <a href="">Dapp development</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>IT CONSULTING</h1>
-                      <a href="">Healthcare IT Consulting Services</a>
-                      <a href="">IT Outsourcing Services</a>
-                    </div>
-                  </div>
-                  <div class="what-we-do-margin what-we-do-flex">
-                    <div class="what-we-do-anchor-div">
-                      <h1>ELECTRIC VEHICLES</h1>
-                      <a href="">E-mobility</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>SECURITY</h1>
-                      <a href="">Cybersecurity</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>DEVOPS</h1>
-                      <a href="">SecOps</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>MOBILE APP DEV</h1>
-                      <a href="">PWA</a>
-                      <a href="">Mobile first Design</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>INNOVATIVE TECHNOLOGIES</h1>
-                      <a href="">Metaverse</a>
-                      <a href="">Private Equity</a>
-                    </div>
-                  </div>
+  <section>
+    <nav class="navbar-override1 flex items-center px-6 py-4 bg-black relative">
+      <!-- Logo -->
+      <div>
+        <img src="assets/blogs/logo.webp" alt="logo" style="max-width: 120px;" />
+      </div>
+  
+      <!-- Navigation Menu -->
+      <div class="nav-center hidden lg:flex items-center gap-8">
+        <!-- Dropdown Menu for "What we do" -->
+        <div class="relative">
+          <button
+            class="flex justify-center items-center text-white hover:text-purple-500 focus:outline-none"
+            id="dropdown-btn"
+          >
+            What we do
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="dropdown-menu" class="hidden absolute left-0 bg-black border border-gray-700 py-2 px-4 space-y-2 z-50">
+            <div class="dropdown">
+              <h2 class="title">What we do <span class="arrow">➔</span></h2>
+              <div class="dropdown-content">
+                <div class="column">
+                  <h3>Capabilities</h3>
+                  <ul>
+                    <li>Cloud</li>
+                    <li>Cybersecurity</li>
+                    <li>Data and Artificial Intelligence</li>
+                    <li>Digital Engineering and Manufacturing</li>
+                    <li>Emerging Technology</li>
+                    <li>Ecosystem Partners</li>
+                    <li>Finance and Risk Management</li>
+                    <li>Infrastructure and Capital Projects</li>
+                    <li>Learning</li>
+                    
+                  </ul>
+                </div>
+                <div class="column ">
+                  <ul>
+                      <li>Marketing and Experience</li>
+                    <li>Metaverse</li>
+                    <li>Sales and Commerce</li>
+                    <li>Strategic Managed Services</li>
+                    <li>Strategy</li>
+                    <li>Supply Chain</li>
+                    <li>Sustainability</li>
+                    <li>Talent and Organization</li>
+                    <li>Technology Transformation</li>
+                  </ul>
+                </div>
+                <div class="h-[49vh] border-l-2 border-grey mx-4"></div>
+                <div class="column">
+                  <h3>Industries</h3>
+                  <ul>
+                    <li>Aerospace and Defense</li>
+                    <li>Automotive</li>
+                    <li>Banking</li>
+                    <li>Capital Markets</li>
+                    <li>Chemicals</li>
+                    <li>Communications and Media</li>
+                    <li>Consumer Goods and Services</li>
+                    <li>Energy</li>
+                    <li>Health</li>
+                    <li>High Tech</li>
+                  </ul>
                 </div>
               </div>
-              <p>What we think</p>
-              <div class="nav-item">
-                <p id="who-we-are">
-                  Who we are <i class="fa-solid fa-chevron-down"></i>
-                </p>
-                <div class="who-we-are-hover-cont">
-                  <div>
-                    <p>Leading Technology Offering For</p>
-                    <div class="d-flex flex-column align-items-start">
-                      <a class="pb-2" href="">Startup</a>
-                      <a class="pb-2" href="">Public Entities</a>
-                      <a href="">Enterprises</a>
-                    </div>
-                  </div>
-                  <div>
-                    <a href="" style="font-weight: bold">ABOUT KKRF</a>
-                    <p>
-                      We believe in change driven by <br />Technology and
-                      ennovation.
-                    </p>
-                  </div>
-                  <div>
-                    <a href="" style="font-weight: bold"
-                      >START YOUR CAREER WITH US</a
-                    >
-                    <p>
-                      Join our team of experts to make a <br />difference in
-                      real world.
-                    </p>
-                  </div>
-                  <div>
-                    <a href="" style="font-weight: bold">CORE TEAM OF KKRF</a>
-                    <p>Meet our powerful machine.</p>
-                  </div>
+            </div>
+          </div>
+        </div>
+  
+        <a href="#" class="text-white hover:text-purple-500">Industries</a>
+        
+        <!-- Who we are dropdown -->
+        <div class="relative">
+          <button
+            class="flex justify-center items-center text-white hover:text-purple-500 focus:outline-none"
+            id="dropdown-btn1"
+          >
+            Who we are
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="dropdown-menu1" class="hidden absolute left-0 bg-black border border-gray-700 py-2 px-4 space-y-2 z-50">
+            <!-- Dropdown content remains the same -->
+            <div class="dropdown2">
+              <h2 class="title">who we are <span class="arrow">➔</span></h2>
+              <div class="dropdown-content">
+                <div class="column">
+                  <h3>Capabilities</h3>
+                  <ul>
+                    <li>Cloud</li>
+                    <li>Cybersecurity</li>
+                    <li>Data and Artificial Intelligence</li>
+                    <li>Digital Engineering and Manufacturing</li>
+                    <li>Emerging Technology</li>
+                    <li>Ecosystem Partners</li>
+                    <li>Finance and Risk Management</li>
+                    <li>Infrastructure and Capital Projects</li>
+                    <li>Learning</li>
+                    
+                  </ul>
+                </div>
+                <div class="column ">
+                  <ul>
+                      <li>Marketing and Experience</li>
+                    <li>Metaverse</li>
+                    <li>Sales and Commerce</li>
+                    <li>Strategic Managed Services</li>
+                    <li>Strategy</li>
+                    <li>Supply Chain</li>
+                    <li>Sustainability</li>
+                    <li>Talent and Organization</li>
+                    <li>Technology Transformation</li>
+                  </ul>
+                </div>
+                <div class="h-[49vh] border-l-2 border-grey mx-4"></div>
+                <div class="column">
+                  <h3>Industries</h3>
+                  <ul>
+                    <li>Aerospace and Defense</li>
+                    <li>Automotive</li>
+                    <li>Banking</li>
+                    <li>Capital Markets</li>
+                    <li>Chemicals</li>
+                    <li>Communications and Media</li>
+                    <li>Consumer Goods and Services</li>
+                    <li>Energy</li>
+                    <li>Health</li>
+                    <li>High Tech</li>
+                  </ul>
                 </div>
               </div>
-              <div class="nav-item">
-                <p id="industries">Industries</p>
-                <div class="industries-cont">
-                  <div>
-                    <div><a href="#">On Demand</a></div>
-                    <div><a href="#">eCommerce</a></div>
-                    <div><a href="#">Real Estate</a></div>
-                    <div><a href="#">Healthcare</a></div>
-                    <div><a href="#">SaaS</a></div>
-                    <div><a href="#">Education</a></div>
-                    <div><a href="#">Restaurant</a></div>
-                    <div><a href="#">Games</a></div>
-                    <div><a href="#">News</a></div>
-                    <div><a href="#">Entertainment</a></div>
-                  </div>
-                  <div>
-                    <div><a href="#">Wellness</a></div>
-                    <div><a href="#">Logistics</a></div>
-                    <div><a href="#">Travel</a></div>
-                    <div><a href="#">Finance</a></div>
-                    <div><a href="#">Aviation</a></div>
-                    <div><a href="#">E-scooter</a></div>
-                    <div><a href="#">Politics</a></div>
-                    <div><a href="#">Agriculture</a></div>
-                    <div><a href="#">Events</a></div>
-                    <div><a href="#">Social Networking</a></div>
-                  </div>
-                  <div>
-                    <div><a href="#">EV</a></div>
-                    <div><a href="#">Oil and Gas</a></div>
-                    <div><a href="#">Banking</a></div>
-                    <div><a href="#">Automotive</a></div>
-                    <div><a href="#">Telecom</a></div>
-                    <div><a href="#">Insurance</a></div>
-                    <div><a href="#">Manufacturing</a></div>
-                    <div><a href="#">Construction</a></div>
-                    <div><a href="#">Retail</a></div>
-                    <div><a href="#">Aerospace and Defense</a></div>
-                  </div>
-                  <div>
-                    <div><a href="#">Capital Markets</a></div>
-                    <div><a href="#">Chemicals</a></div>
-                    <div><a href="#">Communications and Media</a></div>
-                    <div><a href="#">Consumer Goods and Services</a></div>
-                    <div><a href="#">Energy</a></div>
-                    <div><a href="#">Health</a></div>
-                    <div><a href="#">High Tech</a></div>
-                    <div><a href="#">Industrial</a></div>
-                    <div><a href="#">Life Sciences</a></div>
-                    <div><a href="#">Natural Resources</a></div>
-                  </div>
-                  <div>
-                    <div><a href="#">Public Service</a></div>
-                    <div><a href="#">Software and Platforms</a></div>
-                    <div><a href="#">Utilities</a></div>
-                  </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Careers dropdown -->
+        <div class="relative">
+          <button
+            class="flex justify-center items-center text-white hover:text-purple-500 focus:outline-none"
+            id="dropdown-btn2"
+          >
+            Careers
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="dropdown-menu2" class="hidden absolute left-0 bg-black border border-gray-700 py-2 px-4 space-y-2 z-50">
+            <!-- Dropdown content remains the same -->
+            <div class="dropdown3">
+              <h2 class="title">Careers<span class="arrow">➔</span></h2>
+              <div class="dropdown-content">
+                <div class="column">
+                  <h3>Capabilities</h3>
+                  <ul>
+                    <li>Cloud</li>
+                    <li>Cybersecurity</li>
+                    <li>Data and Artificial Intelligence</li>
+                    <li>Digital Engineering and Manufacturing</li>
+                    <li>Emerging Technology</li>
+                    <li>Ecosystem Partners</li>
+                    <li>Finance and Risk Management</li>
+                    <li>Infrastructure and Capital Projects</li>
+                    <li>Learning</li>
+                    
+                  </ul>
+                </div>
+                <div class="column ">
+                  <ul>
+                      <li>Marketing and Experience</li>
+                    <li>Metaverse</li>
+                    <li>Sales and Commerce</li>
+                    <li>Strategic Managed Services</li>
+                    <li>Strategy</li>
+                    <li>Supply Chain</li>
+                    <li>Sustainability</li>
+                    <li>Talent and Organization</li>
+                    <li>Technology Transformation</li>
+                  </ul>
+                </div>
+                <div class="h-[49vh] border-l-2 border-grey mx-4"></div>
+                <div class="column">
+                  <h3>Industries</h3>
+                  <ul>
+                    <li>Aerospace and Defense</li>
+                    <li>Automotive</li>
+                    <li>Banking</li>
+                    <li>Capital Markets</li>
+                    <li>Chemicals</li>
+                    <li>Communications and Media</li>
+                    <li>Consumer Goods and Services</li>
+                    <li>Energy</li>
+                    <li>Health</li>
+                    <li>High Tech</li>
+                  </ul>
                 </div>
               </div>
-            </nav>
-            <button class="btn btn-light fw-bold">CONTACT US</button>
-          </header>
+            </div>
+          </div>
         </div>
       </div>
-    </div>  -->
-  <!-- <nav
-      class="navbar navbar-expand-lg bg-black border-body"
-      data-bs-theme="dark"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+  
+      <!-- Contact Us & Country Selector -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="#" class="text-white hover:text-purple-500">Contact Us</a>
+        <select class="bg-black text-white border border-gray-600 rounded p-1">
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+          <option>Germany</option>
+        </select>
+      </div>
+  
+      <!-- Hamburger Icon for Mobile -->
+      <div class="md:hidden">
+        <button id="menuTrigger" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                What we do
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item text-light">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Who we are
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-item-hover" aria-current="page" href="#"
-                >What we do</a
-              >
-              <div
-                class="nav-content position-fixed bg-black text-light p-5"
-                id="whatWeDo"
-              >
-                <div class="d-flex flex-column">
-                  <div class="d-flex flex-row justify-content-between">
-                    <div class="what-we-do-anchor-div">
-                      <h1>SOFTWARE DEVELOPMENT</h1>
-                      <a href="">ERP Software Development</a>
-                      <a href="">Custom CRM</a>
-                      <a href="">AR/VR Development</a>
-                      <a href="">IoT Development</a>
-                      <a href="">Microservices</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>CLOUD TECHNOLOGIES</h1>
-                      <a href="">Cloud</a>
-                      <a href="">Emerging Technology</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>DATA & INTELLIGENCE</h1>
-                      <a href="">Data and Artificial Intelligence</a>
-                      <a href="">Finance and Risk Management</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>BLOCKCHAIN SERVICES</h1>
-                      <a href="">NFT Marketplace</a>
-                      <a href="">Metaverse Development</a>
-                      <a href="">Dapp development</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>IT CONSULTING</h1>
-                      <a href="">Healthcare IT Consulting Services</a>
-                      <a href="">IT Outsourcing Services</a>
-                    </div>
-                  </div>
-                  <div class="d-flex">
-                    <div class="what-we-do-anchor-div">
-                      <h1>ELECTRIC VEHICLES</h1>
-                      <a href="">E-mobility</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>SECURITY</h1>
-                      <a href="">Cybersecurity</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>DEVOPS</h1>
-                      <a href="">SecOps</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>MOBILE APP DEV</h1>
-                      <a href="">PWA</a>
-                      <a href="">Mobile first Design</a>
-                    </div>
-                    <div class="what-we-do-anchor-div">
-                      <h1>INNOVATIVE TECHNOLOGIES</h1>
-                      <a href="">Metaverse</a>
-                      <a href="">Private Equity</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          
-        </div>
       </div>
-    </nav> -->
-  <nav class="navbar bg-black navbar-expand-lg border-body fixed-top" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Offcanvas navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="hidden md:block lg:hidden">
+        <button id="menuTriggerTab" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="menu-header">
+        <button class="back-btn" id="backBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Back
+        </button>
+        <button id="menuHeaderBackBtn" class="back-button mt-2 ml-2 active" style="position: absolute; top: 0; left: 0; background: none; border: none; padding: 0;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+            <line x1="4" y1="4" x2="20" y2="20" />
+            <line x1="20" y1="4" x2="4" y2="20" />
+          </svg>
+        </button>
+        <button class="country-selector">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          India
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+      </div>
+      
+    
+      <div class="menu-content">
+        
+        <!-- Main Menu -->
+        <div class="menu-section active" id="mainMenu">
+          <button class="menu-item with-arrow" data-target="whatWeDo">
+            What we do
+            <span class="purple-arrow"></span>
+          </button>
+          <button class="menu-item">What we think</button>
+          <button class="menu-item with-arrow" data-target="whoWeAre">
+            Who we are
+            <span class="purple-arrow"></span>
+        </button>
+        <button class="menu-item with-arrow" data-target="careers">
+            Careers
+            <span class="purple-arrow"></span>
+        </button>
+        
+          <button class="bottom-link">Contact Us</button>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#00000">
+                <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+    
+        <!-- What We Do Section -->
+        <div class="menu-section" id="whatWeDo">
+          <h2 class="page-title">What we do</h2>
+          <button class="menu-item with-arrow" data-target="capabilities">
+            Capabilities
+            <span class="purple-arrow"></span>
+          </button>
+          <button class="menu-item with-arrow" data-target="industries">
+            Industries
+            <span class="purple-arrow"></span>
+          </button>
         </div>
+    
+
+        <!-- Who We Are Section -->
+<div class="menu-section" id="whoWeAre">
+  <h2 class="page-title">Who we are</h2>
+  <!-- Add your content here -->
+</div>
+
+<!-- Careers Section -->
+<div class="menu-section" id="careers">
+  <h2 class="page-title">Careers</h2>
+  <!-- Add your content here -->
+</div>
+
+        <!-- Capabilities Section -->
+        <div class="menu-section" id="capabilities">
+          <h2 class="page-title">Capabilities</h2>
+          <div class="submenu-items">
+            <button class="menu-item">Cloud</button>
+            <button class="menu-item">Cybersecurity</button>
+            <button class="menu-item">Data and Artificial Intelligence</button>
+            <!-- Add other items here -->
+          </div>
+        </div>
+    
+        <!-- Industries Section -->
+        <div class="menu-section" id="industries">
+          <h2 class="page-title">Industries</h2>
+          <div class="submenu-items">
+            <button class="menu-item">Aerospace and Defense</button>
+            <button class="menu-item">Automotive</button>
+            <!-- Add other items here -->
+          </div>
+        </div>
+    
+        
+        <!-- Bottom Section -->
       </div>
     </div>
-  </nav>
+    
+    <div class="tabtab-menu" id="tabtabMenu">
+      <div class="menu-header-tab">
+          <button class="back-btn-tab">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              Back
+          </button>
+          <button class="country-selector-tab">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              India
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+              </svg>
+          </button>
+      </div>
+
+      <div class="menu-title-tab">
+          What we do
+          <span class="purple-badge-tab">NEW</span>
+      </div>
+
+      <div class="columns-container-tab">
+          <div class="column-tab">
+              <div class="column-title-tab">Capabilities</div>
+              <button class="menu-item-tab">Cloud</button>
+              <button class="menu-item-tab">Cybersecurity</button>
+              <button class="menu-item-tab">Data and Artificial Intelligence</button>
+              <button class="menu-item-tab">Digital Engineering and Manufacturing</button>
+              <button class="menu-item-tab">Emerging Technology</button>
+              <button class="menu-item-tab">Ecosystem Partners</button>
+              <button class="menu-item-tab">Finance and Risk Management</button>
+              <button class="menu-item-tab">Infrastructure and Capital Projects</button>
+              <button class="menu-item-tab">Learning</button>
+              <button class="menu-item-tab">Marketing and Experience</button>
+              <button class="menu-item-tab">Metaverse</button>
+              <button class="menu-item-tab">Sales and Commerce</button>
+              <button class="menu-item-tab">Strategic Managed Services</button>
+              <button class="menu-item-tab">Strategy</button>
+              <button class="menu-item-tab">Supply Chain</button>
+              <button class="menu-item-tab">Sustainability</button>
+              <button class="menu-item-tab">Talent and Organization</button>
+              <button class="menu-item-tab">Technology Transformation</button>
+          </div>
+
+          <div class="divider-tab"></div>
+
+          <div class="column-tab">
+              <div class="column-title-tab">Industries</div>
+              <button class="menu-item-tab">Aerospace and Defense</button>
+              <button class="menu-item-tab">Automotive</button>
+              <button class="menu-item-tab">Banking</button>
+              <button class="menu-item-tab">Capital Markets</button>
+              <button class="menu-item-tab">Chemicals</button>
+              <button class="menu-item-tab">Communications and Media</button>
+              <button class="menu-item-tab">Consumer Goods and Services</button>
+              <button class="menu-item-tab">Energy</button>
+              <button class="menu-item-tab">Health</button>
+              <button class="menu-item-tab">High Tech</button>
+              <button class="menu-item-tab">Industrial</button>
+              <button class="menu-item-tab">Insurance</button>
+              <button class="menu-item-tab">Life Sciences</button>
+              <button class="menu-item-tab">Natural Resources</button>
+              <button class="menu-item-tab">Public Service</button>
+              <button class="menu-item-tab">Private Equity</button>
+              <button class="menu-item-tab">Retail</button>
+              <button class="menu-item-tab">Software and Platforms</button>
+              <button class="menu-item-tab">Travel</button>
+              <button class="menu-item-tab">Utilities</button>
+          </div>
+      </div>
+  </div>
+
+    
+    
+  
+   </section>
   <!-- Hero Section -->
   <section>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
@@ -1858,6 +1932,7 @@
   <script src="scripts/customerReviews.js"></script>
   <script src="scripts/recentHappenings.js"></script>
   <script src="scripts/animation.js"></script>
+  <script src="scripts/nav.js"></script>
 </body>
 
 </html>
