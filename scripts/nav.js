@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
               targetSection.classList.add('active');
               navigationStack.push(targetId);
               backBtn.classList.add('active');
+              menuHeaderBackBtn.classList.add("hidden");
               updateHeaderBackBtnVisibility(); // Update visibility when navigating
           }
       });
@@ -79,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Hide the back button if at the top level
       if (navigationStack.length === 0) {
           backBtn.classList.remove('active');
+          menuHeaderBackBtn.classList.remove("hidden");
       }
 
       updateHeaderBackBtnVisibility(); // Update visibility on back navigation
@@ -119,12 +121,65 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// tabview
+document.addEventListener('DOMContentLoaded', function() {
+  const tabMenu = document.getElementById('tabMenu1');
+  const menuTrigger = document.getElementById('menuTriggerTab');
+  const backBtn = document.getElementById('backBtn1');
+  const closeBtn = document.getElementById('closeBtn1');
+  const menuSections = document.querySelectorAll('.tabtab-menu-section');
+  const mainMenu = document.getElementById('mainMenu1');
+  
+  let navigationStack = [];
 
-document.getElementById('menuTriggerTab').addEventListener('click', () => {
-  document.getElementById('tabtabMenu').classList.add('active');
-});
+  menuTrigger.addEventListener('click', () => {
+      tabMenu.classList.add('tabtab-active');
+      updateBackButton();
+  });
 
-document.querySelector('.back-btn-tab').addEventListener('click', () => {
-  document.getElementById('tabtabMenu').classList.remove('active');
+  closeBtn.addEventListener('click', () => {
+      tabMenu.classList.remove('tabtab-active');
+      resetMenu();
+  });
+
+  document.querySelectorAll('.tabtab-menu-item[data-target]').forEach(button => {
+      button.addEventListener('click', () => {
+          const targetId = button.getAttribute('data-target');
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+              menuSections.forEach(section => section.classList.remove('tabtab-active'));
+              targetSection.classList.add('tabtab-active');
+              navigationStack.push(targetId);
+              updateBackButton();
+          }
+      });
+  });
+
+  backBtn.addEventListener('click', () => {
+      navigationStack.pop();
+      const previousSection = navigationStack.length > 0
+          ? document.getElementById(navigationStack[navigationStack.length - 1])
+          : mainMenu;
+
+      menuSections.forEach(section => section.classList.remove('tabtab-active'));
+      previousSection.classList.add('tabtab-active');
+      updateBackButton();
+  });
+
+  function updateBackButton() {
+      if (navigationStack.length > 0) {
+          backBtn.classList.add('tabtab-active');
+          closeBtn.classList.add('hidden');
+      } else {
+          backBtn.classList.remove('tabtab-active');
+          closeBtn.classList.remove('hidden');
+      }
+  }
+
+  function resetMenu() {
+      navigationStack = [];
+      menuSections.forEach(section => section.classList.remove('tabtab-active'));
+      mainMenu.classList.add('tabtab-active');
+      updateBackButton();
+  }
 });

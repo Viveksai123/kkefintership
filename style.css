@@ -126,7 +126,7 @@ body {
 }
 
 /* Section headings */
-.section-title {
+.erp-section-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
@@ -832,7 +832,13 @@ body {
 
 
 /* servies */
-
+.intro-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  position: relative;
+}
 .software-text {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -891,33 +897,59 @@ body {
   box-shadow: 0 0 15px rgba(247, 246, 246, 0.5);
   background: #000;
 }
-
-
 .services-nav {
-    background: #444;
-    padding: 1.5rem;
-    min-width: 300px;
-    max-height: 400px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #999 #333;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  background: #444; /* Background color */
+  padding: 1.5rem;
+  min-width: 300px;
+  max-height: 400px;
+  overflow-y: scroll; /* Ensure scroll is enabled */
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+  scrollbar-color: #bbb #333; /* Colors for Firefox */
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle shadow inside */
 }
 
+/* For WebKit-based browsers (Chrome, Edge, Safari) */
 .services-nav::-webkit-scrollbar {
-    width: 4px;
+  width: 0; /* Slim scrollbar */
+  height: 0; /* Remove horizontal scrollbar (if present) */
 }
 
 .services-nav::-webkit-scrollbar-thumb {
-    background: #999;
-    border-radius: 10px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  background: #bbb; /* Thumb color */
+  border-radius: 10px; /* Rounded thumb */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow on thumb */
 }
 
 .services-nav::-webkit-scrollbar-track {
-    background: #333;
-    border-radius: 10px;
+  background: #333; /* Track background color */
+  border-radius: 10px; /* Rounded track corners */
 }
+
+/* Completely remove scrollbar arrows */
+.services-nav::-webkit-scrollbar-button {
+  display: none; /* Hides both up and down arrows */
+  width: 0;
+  height: 0;
+}
+
+/* For Internet Explorer/Legacy Edge */
+.services-nav {
+  -ms-overflow-style: none; /* Removes scrollbar styling in IE/Edge */
+}
+
+/* For Firefox (Remove buttons) */
+.services-nav::-moz-scrollbar-button {
+  display: none; /* Hides both arrows for Firefox */
+}
+
+/* Fallback for hidden arrows (Universal) */
+.services-nav::-webkit-scrollbar-button:single-button {
+  display: none;
+}
+
+
+
+
 
 .service-item {
     padding: 1rem;
@@ -1544,8 +1576,126 @@ body1 {
       margin: 1rem 0;
   }
 }
+.tab-heading{
+  size: 45px;
+}
 
+.tabtab-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  z-index: 50;
+  overflow-y: auto;
+}
 
+.tabtab-menu.tabtab-active {
+  display: block;
+}
+
+.tabtab-menu-section {
+  display: none;
+  padding: 24px;
+}
+
+.tabtab-menu-section.tabtab-active {
+  display: block;
+}
+
+.tabtab-menu-item {
+  width: 100%;
+  padding: 8px 0;
+  text-align: left;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.tabtab-menu-item:hover {
+  opacity: 0.8;
+}
+
+.tabtab-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.tabtab-back-btn {
+  padding: 8px;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.tabtab-back-btn.tabtab-active {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tabtab-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid rgb(75, 85, 99);
+}
+
+.tabtab-country-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.tabtab-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background-color: black;
+  border-top: 1px solid rgb(75, 85, 99);
+}
+
+.tabtab-social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.tabtab-social-icon {
+  padding: 8px;
+  border-radius: 9999px;
+  color: white;
+}
+
+.tabtab-social-icon:hover {
+  background-color: rgb(31, 41, 55);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tabtab-menu {
+      display: none;
+  }
+}
 
 
 
@@ -1703,6 +1853,77 @@ body1 {
     }
     
 
+
+  
+.crm-intro-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  position: relative;
+  color: #000;
+}
+.crm-Software-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #000;
+  position: relative;
+}
+.crm-software-con{
+  background-color: #fff;
+  /* border-radius: 10vh; */
+}
+.crm-software-section {
+  background-color: #ffffff;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  height: 100%;
+}
+
+
+.crm-services-container {
+  display: flex;
+  min-height: 400px;
+  max-width: 1000px; /* Reduced from 1200px to 1000px */
+  margin: 2rem auto;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 10px 14px 15px rgba(4, 4, 4, 0.8);
+  margin-bottom: 10vw;
+}
+
+.crm-features-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.crm-feature-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.crm-feature-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+
+.crm-feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.crm-feature-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
 
 /* 
