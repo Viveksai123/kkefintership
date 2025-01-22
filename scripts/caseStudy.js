@@ -45,10 +45,10 @@ function createCaseStudyHTML(caseStudy) {
             style="top: ${caseStudy.stickyTop}; z-index: ${caseStudy.zIndex}; box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);">
             <div class="d-flex flex-column flex-md-row py-md-5 px-md-4 p-lg-5">
                 <div class="py-4 animate__animated animate__fadeInLeft">
-                    <p class="mb-3 mb-lg-5 btn btn-secondary">${caseStudy.type}</p>
-                    <h2 class="mb-3 fw-semibold mb-lg-5">${caseStudy.title}</h2>
+                    <p class="mb-3 mb-lg-5 btn bg-black btn-secondary bg-black">${caseStudy.type}</p>
+                    <h2 class="mb-3 fw-semibold category-heading mb-lg-5">${caseStudy.title}</h2>
                     <p class="mb-3 mb-lg-5 pe-5">${caseStudy.description}</p>
-                    <button type="button" class="btn px-4 py-2 btn-outline-dark">
+                    <button type="button" class="btn button-row px-4 py-2 btn-outline-dark">
                         Read More
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -60,7 +60,7 @@ function createCaseStudyHTML(caseStudy) {
                 <div class="ps-0 animate__animated animate__fadeInRight">
                     <img src="${caseStudy.imageUrl}" 
                          alt="${caseStudy.title}" 
-                         class="case-study-card-image mx-auto">
+                         class="case-study-card-image w-auto mx-auto">
                 </div>
             </div>
         </li>

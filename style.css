@@ -57,6 +57,14 @@ body {
   position: relative;
   z-index: 2;
 }
+.button-row{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 0.5rem;
+}
+
 
 /* Breadcrumb and heading spacing */
 .breadcrumb {
@@ -1774,6 +1782,7 @@ body1 {
       }
     }
   
+    
     .faq-section {
       padding: 40px 20px;
       background-color: #f9f9ff;
@@ -1851,6 +1860,9 @@ body1 {
         padding: 40px 20px;
       }
     }
+    .accordion-button.collapsed::after {
+      transform: rotate(0deg); /* Default state */
+    }
     
 
 
@@ -1926,8 +1938,8 @@ body1 {
 }
 
 
-/* 
-@media screen and (max-width:576px) {
+
+/* @media screen and (max-width:576px) {
   .case-study-card {
     margin-top: 1rem;
     margin-right: 0.8rem;
@@ -2209,11 +2221,19 @@ body1 {
 .statistics-content-section-numerics {
   font-size: 2.5rem;
 }
+.stati-heading{
+  font-size: 3vw;
+}
 
 .statistics-content-section-partner-with-us-card {
   height: 180px;
 }
-
+@media screen and (max-width: 576px){
+  .stati-heading{
+    margin-top: -20px;
+    margin-bottom:15px;
+  }
+}
 
 /* categories-section */
 
@@ -2234,7 +2254,10 @@ body1 {
     letter-spacing: 1px;
   }
 }
-
+.category-heading{
+  font-size: 2rem;
+  margin: 13px;
+}
 .categories-image-gallery {
   height: 550px;
 }
@@ -2430,9 +2453,8 @@ ul.no-padding {
   }
 
   .case-study-card-image {
-    height: 300px;
-    width: 300px;
-    margin-left: 3rem;
+    height: 250px;
+    width: 250px;
   }
 }
 
@@ -2445,9 +2467,9 @@ ul.no-padding {
   }
 
   .case-study-card-image {
-    height: 400px;
-    width: 400px;
-    margin-left: 3rem;
+    height: 300px;
+    width: 300px;
+    
   }
 }
 
@@ -2565,7 +2587,7 @@ ul.no-padding {
 /* recent Happenings */
 
 .recent-happening-text{
-  color: #fff;
+  color: #000;
 }
 .recent-happenings-heading {
   font-size: 32px;
@@ -2601,7 +2623,7 @@ ul.no-padding {
   height: 380px !important;
 }
 .recent-happenings-text{
-  color: black;
+  color: black; 
 }
 .recent-happenings-lg-image-section {
   height: 780px;
@@ -2623,7 +2645,7 @@ ul.no-padding {
 .blogs-card-heading {
   font-weight: 550;
   font-size: 20px;
-  color: #333; /* Dark text for readability inside the card */
+  color: #000; /* Dark text for readability inside the card */
   font-family: 'Georgia', serif; /* Classic serif font for blog titles */
 }
 
@@ -2670,7 +2692,9 @@ ul.no-padding {
 }
 
 
-
+.case-heading{
+  font-size: 3vw;
+}
 
 /* Card Styling */
 .bo-card {
