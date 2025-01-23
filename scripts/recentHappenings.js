@@ -30,10 +30,12 @@ function updateActiveTab(index) {
     tabs.forEach((tab, i) => {
         if (i === index) {
             tab.classList.add('recent-happenings-active-tab');
-            tab.classList.remove('recent-happenings-text')
+            
+            tab.classList.remove('recent-happenings-text');
         } else {
             tab.classList.remove('recent-happenings-active-tab');
-            tab.classList.add('recent-happenings-text')
+           
+            tab.classList.add('recent-happenings-text');
         }
     });
 }

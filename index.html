@@ -1333,89 +1333,95 @@
 
   <!-- client reviews section -->
   <section>
-    <div class="container-fluid bg-black text-light pt-5 px-4 px-md-5">
-      <div class="d-flex flex-column px-md-4 px-lg-0">
-        <div class="col-12">
-          <h2 class="client-reviews-heading text-center fw-semibold mb-3 text-md-start animate__animated animate__flipInX">
-            Real People, Real Reviews
-          </h2>
-          <p class="fs-5 mb-8 animate__animated animate__fadeInLeft">
-            Our clients praise our innovative tech solutions, seamless service, and reliable support.
-          </p>
-        </div>
+    <div class="container-fluid bg-black text-light py-5 px-3 px-md-4 px-lg-5">
         <div class="row">
-          <!-- Left Column: Image -->
-          <div class="col-12 col-lg-7 col-xl-7 animate__animated animate__bounceIn mb-4 mb-lg-0">
-            <div>
-              <img src="assets/client-reviews/client-reviews-image-1.webp" class="w-100 rounded-4 client-review-image" alt="client reviews image 1">
+            <div class="col-12">
+                <h2 class="client-reviews-heading text-center text-lg-start fw-semibold mb-3 animate__animated animate__flipInX">
+                    Real People, Real Reviews
+                </h2>
+                <p class="fs-5 mb-4 text-center text-lg-start animate__animated animate__fadeInLeft">
+                    Our clients praise our innovative tech solutions, seamless service, and reliable support.
+                </p>
             </div>
-          </div>
-          <!-- Right Column: Fact & Numbers Card -->
-          <div class="col-12 col-lg-5 col-xl-5 animate__animated animate__bounceIn">
-            <div class="client-reviews-facts-card bg-dark text-light p-4 rounded-4 mb-4 mx-md-auto">
-              <p class="fs-2 mb-4 mt-1 fact-and-numbers">Fact & Numbers</p>
-              <p class="client-reviews-facts-card-para client-reviews-facts-card-lg-para">
-                <span class="client-reviews-facts-card-percentage fw-bold">98%</span>
-                <br> of customers recommend
-                <br>KKRF Service
-              </p>
-            </div>
-          </div>
         </div>
-        <div class="row">
-          <!-- Left Column: Customer Stories Carousel -->
-          <div class="col-12 col-lg-4 col-xl-4 animate__animated animate__bounceIn mb-4 mb-lg-0">
-            <div id="carouselExampleSlidesOnly" class="carousel slide mb-4 client-reviews-stories-card position-relative mx-md-auto" data-bs-ride="carousel">
-              <div class="carousel-inner rounded-4" id="customerStoriesCarousel">
-                <!-- Dynamic content will be rendered here -->
-              </div>
-            </div>
-          </div>
-          <!-- Right Column: Customer Reviews Carousel -->
-          <div class="col-12 col-lg-8 col-xl-8 animate__animated animate__bounceIn">
-            <div class="bg-dark text-light rounded-4 mb-4">
-              <div id="carouselExampleControlsNoTouching" class="carousel slide client-reviews-last-section p-5" data-bs-touch="false" data-bs-interval="false">
-                <div class="carousel-inner carousel-for-reviews" id="customerReviews">
-                  <!-- Dynamic reviews will be inserted here -->
+        
+        <div class="row g-4 g-lg-5 align-items-stretch">
+            <!-- Image and Facts Column -->
+            <div class="col-12 col-md-6 col-lg-7 order-2 order-lg-1">
+                <div class="row g-4">
+                    <!-- Client Image -->
+                    <div class="col-12 animate__animated animate__bounceIn">
+                        <img src="assets/client-reviews/client-reviews-image-1.webp" 
+                             class="w-100 rounded-4 client-review-image object-fit-cover" 
+                             alt="client reviews image 1">
+                    </div>
+                    
+                    <!-- Facts Card -->
+                    <div class="col-12 animate__animated animate__bounceIn">
+                        <div class="client-reviews-facts-card bg-dark text-light p-4 rounded-4 h-100">
+                            <p class="fs-2 mb-4 mt-1 fact-and-numbers text-center">Fact & Numbers</p>
+                            <p class="client-reviews-facts-card-para text-center">
+                                <span class="client-reviews-facts-card-percentage fw-bold">98%</span>
+                                <br> of customers recommend
+                                <br>KKRF Service
+                            </p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Reviews Columns -->
+            <div class="col-12 col-md-6 col-lg-5 order-1 order-lg-2">
+                <div class="row g-4">
+                    <!-- Customer Reviews Carousel - Now First -->
+                    <div class="col-12 animate__animated animate__bounceIn">
+                        <div class="bg-dark text-light rounded-4 h-100">
+                            <div id="customerReviewsCarousel" class="carousel slide p-4" data-bs-touch="false" data-bs-interval="false">
+                                <div class="carousel-inner carousel-for-reviews" id="customerReviews">
+                                    <!-- Dynamic reviews will be inserted here -->
+                                </div>
   
-                <!-- Carousel Navigation Buttons -->
-                <div class="d-flex justify-content-end carousel-for-reviews-buttons me-4">
-                  <div>
-                    <button class="btn" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                      <span class="" aria-hidden="true">
-                        <img src="https://cdn.prod.website-files.com/6753c944298bec1f730af5a1/67552d7cfb1384c541afb185_arrow-leff.svg" loading="lazy" width="32" height="32" alt="" class="testimonial-arrow-icon" style="opacity: 1;">
-                      </span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="btn" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                      <span class="" aria-hidden="true">
-                        <img src="https://cdn.prod.website-files.com/6753c944298bec1f730af5a1/67552d7c3f9197c27abffdfc_arrow-right-32.svg" loading="lazy" width="32" height="32" alt="" class="testimonial-arrow-icon" style="opacity: 1;">
-                      </span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
+                                <!-- Carousel Navigation Buttons -->
+                                <div class="d-flex justify-content-end carousel-for-reviews-buttons">
+                                    <button class="btn me-2" type="button" data-bs-target="#customerReviewsCarousel" data-bs-slide="prev">
+                                        <img src="https://cdn.prod.website-files.com/6753c944298bec1f730af5a1/67552d7cfb1384c541afb185_arrow-leff.svg" 
+                                             loading="lazy" width="32" height="32" alt="Previous" class="testimonial-arrow-icon">
+                                    </button>
+                                    <button class="btn" type="button" data-bs-target="#customerReviewsCarousel" data-bs-slide="next">
+                                        <img src="https://cdn.prod.website-files.com/6753c944298bec1f730af5a1/67552d7c3f9197c27abffdfc_arrow-right-32.svg" 
+                                             loading="lazy" width="32" height="32" alt="Next" class="testimonial-arrow-icon">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Stories Carousel - Now Second -->
+                    <div class="col-12 animate__animated animate__bounceIn">
+                        <div id="customerStoriesCarousel" class="carousel slide mb-4 client-reviews-stories-card" data-bs-ride="carousel">
+                            <div class="carousel-inner rounded-4">
+                                <!-- Dynamic content will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
   
   <!-- Recent happenings -->
   <section class="bg-[#f5f5f7]">
     <div class="container-fluid">
-      <h2 class="recent-happenings-heading mt-5 px-3 px-md-2 text-black px-lg-4 animate__animated animate__fadeInUp">
+      <h2 class="recent-happenings-heading mt-5 m-4 px-3 px-md-2 text-black px-lg-4 animate__animated animate__fadeInUp">
         Recent Happenings at KKRF
       </h2>
       
       <!-- Mobile and Tablet Layout (d-lg-none) -->
-      <div class="row d-lg-none">
+      <div class="row d-xl-none">
         <!-- Card 1 -->
         <div class="col-12 col-md-6 animate__animated animate__bounceIn">
-          <div class="border-bottom border-3 py-3 mb-5 mx-3 mx-md-0 recent-happenings-card">
+          <div class="border-bottom border-3 p-4 py-3 mb-5 mx-3 mx-md-0 recent-happenings-card">
             <img src="https://cdn.pixabay.com/photo/2023/05/16/10/53/technology-7997259_1280.jpg" class="w-100 rounded-3 mb-5" alt="">
             <p class="fs-5 text-black mt-4 mx-2 my-md-5">KKRF secures $2.5 Million project from Oil India to transform Wellhead Monitoring</p>
             <button type="button" class="btn button-row d-flex ms-0 mt-md-5">
@@ -1428,8 +1434,8 @@
         </div>
   
         <!-- Card 2 -->
-        <div class="col-12 col-md-6 animate__animated animate__fadeInUp">
-          <div class="border-bottom border-3 py-3 mb-5 mx-3 mx-md-0 recent-happenings-card">
+        <div class="col-12 col-md-6 animate__animated animate__fadeIn">
+          <div class="border-bottom border-3 p-4 py-3 mb-5 mx-3 mx-md-0 recent-happenings-card">
             <img src="https://cdn.pixabay.com/photo/2023/05/16/10/53/technology-7997258_1280.jpg" class="w-100 rounded-3 mb-5" alt="">
             <p class="fs-5 text-black mt-4 mx-2 my-md-5">KKRF wins Bronze Stevie® Award in 2024 International Business Awards®</p>
             <button type="button" class="btn d-flex button-row ms-0 mt-md-4">
@@ -1443,7 +1449,7 @@
   
         <!-- Card 3 -->
         <div class="col-12 col-md-6 animate__animated animate__bounceIn">
-          <div class="border-bottom border-3 py-3 mb-5 mx-3 mx-md-0 recent-happenings-card">
+          <div class="border-bottom border-3 p-4 py-3 mb-5 mx-3 mx-md-0 recent-happenings-card">
             <img src="https://cdn.pixabay.com/photo/2023/06/10/07/18/computer-8053370_1280.jpg" class="w-100 rounded-3 mb-5" alt="">
             <p class="fs-5 text-black m-4 mx-2 my-md-5">KKRF emerges as a Leader in Zinnov Zones Digital Engineering and ER&D Services Ratings 2023, again</p>
             <button type="button" class="btn d-flex button-row ms-0 mt-md-5">
@@ -1457,7 +1463,7 @@
   
         <!-- Card 4 -->
         <div class="col-12 col-md-6 animate__animated animate__bounceIn">
-          <div class="border-bottom border-3 py-3 mb-5 mx-3 mx-md-0 recent-happenings-card">
+          <div class="border-bottom border-3 p-4 py-3 mb-5 mx-3 mx-md-0 recent-happenings-card">
             <img src="https://cdn.pixabay.com/photo/2023/06/06/15/55/computer-8045000_1280.jpg" class="w-100 rounded-3 mb-5" alt="">
             <p class="fs-5 text-black m-4 mx-2 my-md-5">KKRF Recognized as a 'Challenger' in Avasant's SAP S/4HANA Services 2023-2024 RadarView™</p>
             <button type="button" class="btn d-flex button-row ms-0 mt-md-5">
@@ -1471,7 +1477,7 @@
       </div>
   
       <!-- Desktop Layout (d-none d-lg-block) -->
-      <div class="row d-none d-lg-block mt-5 recent-happenings px-1">
+      <div class="row d-none d-xl-block mt-5 recent-happenings px-1">
         <div class="row mx-4">
           <div class="col-lg-6">
             <div class="animate__animated animate__fadeInLeft">
@@ -1484,8 +1490,8 @@
           
           <div class="col-lg-6">
             <div class="d-flex flex-column">
-              <div class="d-flex flex-row justify-content-center align-items-center">
-              <div id="tab1" class="col-5 animate__bounceIn recent-happenings-tab me-4 border-bottom border-top border-3 py-3 mb-4 mx-3 me-3 recent-happenings-active-tab">
+              <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+              <div id="tab1" class="col-12 col-xl-5 animate__bounceIn recent-happenings-tab recent-happenings-text me-4 border-bottom border-top border-3 py-3 mb-4 mx-3 me-3">
                 <div class="px-4 py-3">
                   <p class="fw-semibold fs-5 mt-5">KKRF secures $2.5 Million project from Oil India to transform Wellhead Monitoring</p>
                   <button type="button" class="btn button-row d-flex ms-0 mt-md-5">
@@ -1497,9 +1503,9 @@
                 </div>
               </div>
   
-              <div id="tab2" class="col-5 animate__bounceIn recent-happenings-tab me-4 border-bottom border-top py-3 mb-4 mx-3 me-3">
+              <div id="tab2" class="col-12 col-xl-5 animate__bounceIn recent-happenings-tab recent-happenings-text me-4 border-bottom border-top py-3 mb-4 mx-3 me-3">
                 <div class="px-4 py-3">
-                  <p class="fw-semibold fs-5 mt-5">KKRF wins Bronze Stevie® Award in 2024 International Business Awards®</p>
+                  <p class="fw-semibold fs-5 mt-5" >KKRF wins Bronze Stevie® Award in 2024 International Business Awards®</p>
                   <button type="button" class="btn d-flex button-row ms-0 mt-md-5">
                     <p class="">Read More</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -1510,7 +1516,7 @@
               </div>
             </div>
             <div class="d-flex flex-row justify-content-center align-items-center">
-              <div id="tab3" class="col-5 animate__animated animate__bounceIn recent-happenings-tab me-4 border-bottom border-top py-3 mb-5 mx-3 me-3">
+              <div id="tab3" class="col-12 col-xl-5 animate__animated animate__bounceIn recent-happenings-text recent-happenings-tab me-4 border-bottom border-top py-3 mb-5 mx-3 me-3">
                 <div class="px-4 py-3">
                   <p class="fw-semibold fs-5 mt-5">KKRF Recognized as a 'Challenger' in Avasant's SAP S/4HANA Services 2023-2024 RadarView™</p>
                   <button type="button" class="btn d-flex ms-0 button-row mt-md-5">
@@ -1522,7 +1528,7 @@
                 </div>
               </div>
   
-              <div id="tab4" class="col-5 animate__bounceIn recent-happenings-tab me-4 border-bottom border-top py-3 mb-5 mx-3 me-3">
+              <div id="tab4" class="col-6 col-xl-5 animate__bounceIn recent-happenings-tab recent-happenings-text recent-happenings-tab me-4 border-bottom border-top py-3 mb-5 mx-3 me-3">
                 <div class="px-4 py-3">
                   <p class="fw-semibold fs-5 mt-5">KKRF emerges as a Leader in Zinnov Zones Digital Engineering and ER&D Services Ratings 2023, again</p>
                   <button type="button" class="btn d-flex button-row ms-0 mt-md-5">
@@ -1555,17 +1561,17 @@
         <button class="btn btn-dark btn-lg animate__animated animate__fadeInRight">Read All Blogs</button>
       </div>
     </div>
-    <div class="blogs-card-section py-5 mx-2 mx-md-5">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card bo-card border-0 shadow-lg w-100 rounded-4 position-relative">
+    <div class="blogs-card-section py-6 mx-2 mx-md-5">
+      <div class="d-flex flex-row justify-content-center align-items-center gap-3 flex-wrap">
+        <div class="col-12 col-md-5 col-lg-5 col-xl-3" >
+          <div class="card bo-card border-0 shadow-lg w-100 rounded-4 position-relative mb-4">
             <img src="assets/blogs/image1.webp" class="card-img-top rounded-4" alt="Top signs your computer needs immediate repair">
             <p class="date-section position-absolute top-0 end-0 bg-black rounded-pill px-3 py-1 mt-4 me-4 fw-semibold">Dec 9, 2024</p>
             <p class="date-section position-absolute top-0 bg-black rounded-pill px-3 py-1 mt-4 mr-auto fw-semibold">Dec 9, 2024</p>
             <div class="card-body bo-card-body text-black">
               <h5 class="blogs-card-heading">Top signs your computer needs immediate repair</h5>
               <p class="blogs-card-text">Is your computer acting up? This blog highlights the key signs that indicate your computer needs professional repair.</p>
-              <button type="button" class="btn custom-btn px-3 py-2 text-black border border-black bg-transparent blogs-card-text">
+              <button type="button" class="btn custom-btn px-3 button-row py-2 text-black border border-black bg-transparent blogs-card-text">
                 Read More
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
                   class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
@@ -1577,7 +1583,7 @@
           </div>
         </div>
         <!-- Repeat this structure for other cards -->
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-5 col-lg-5 col-xl-3">
           <div class="card bo-card shadow-lg w-100 rounded-4 position-relative mb-4">
             <img src="assets/blogs/image2.webp" class="card-img-top rounded-top-4"
               alt="How to safeguard your business from cyber threats">
@@ -1587,7 +1593,7 @@
               <p class="blogs-card-text">In today’s digital age, cyber threats are a constant concern for
                 businesses. This
                 blog explores practical steps you can take</p>
-                <button type="button" class="btn custom-btn px-3 py-2 text-black border border-black bg-transparent blogs-card-text">
+                <button type="button" class="btn custom-btn button-row px-3 py-2 text-black border border-black bg-transparent blogs-card-text">
                   Read More
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
                     class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
@@ -1598,7 +1604,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-5 col-lg-5 col-xl-3">
           <div class="card bo-card border-0 shadow-lg w-100 rounded-4 position-relative mb-4">
             <img src="assets/blogs/image3.webp" class="card-img-top rounded-top-4"
               alt="Maximizing productivity with these simple IT hacks">
@@ -1608,7 +1614,7 @@
               <p class="blogs-card-text">Boosting productivity doesn’t always require expensive software or tools. In
                 this
                 blog, we share easy IT hacks that can help you </p>
-                <button type="button" class="btn custom-btn px-3 py-2 text-black border border-black bg-transparent blogs-card-text">
+                <button type="button" class="btn custom-btn button-row px-3 py-2 text-black border border-black bg-transparent blogs-card-text">
                   Read More
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
                     class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
@@ -1630,7 +1636,7 @@
 
   <section class=" forms-section">
     <div class="container-fluid py-5 px-3 text-light px-md-5">
-      <div class="d-flex flex-column flex-lg-row mx-md-5 me-lg-0">
+      <div class="d-flex flex-column flex-xl-row mx-md-5 me-lg-0">
         <div class="forms-first-section me-lg-5 py-lg-5 animate__animated animate__fadeInLeft">
           <div>
             <h2 class="forms-first-section-heading">Need quick help?<br class="d-none d-md-inline"> Contact us now!</h2>

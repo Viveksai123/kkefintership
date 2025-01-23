@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sequential Card Scroll</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Main Section Styling */
+    .main-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      min-height: 150vh;
+      padding: 20px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .left-part {
+      flex: 1;
+      padding: 20px;
+      margin-right: 20px;
+    }
+
+    .left-part h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .left-part p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .right-part {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .cards-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      color: #333;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.2rem;
+      opacity: 0; /* Start hidden */
+      transform: translateY(50px); /* Start slightly below */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Next Section Styling */
+    .next-section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #333;
+      color: white;
+      text-align: center;
+    }
+
+    .next-section h2 {
+      font-size: 2.5rem;
+    }
+
+    .next-section p {
+      font-size: 1.2rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-section {
+        flex-direction: column;
+      }
+
+      .right-part {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Section -->
+  <section class="main-section">
+    <div class="left-part">
+      <h1>Welcome</h1>
+      <p>
+        This is the left section of the page. Add your content here, such as a description or an introduction.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros vitae ex faucibus interdum. Donec
+        fermentum bibendum orci nec suscipit. Sed malesuada lectus vitae nulla laoreet, id tincidunt eros tempus.
+      </p>
+    </div>
+    <div class="right-part">
+      <div class="cards-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+        <div class="card">Card 5</div>
+        <div class="card">Card 6</div>
+        <div class="card">Card 7</div>
+        <div class="card">Card 8</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Section -->
+  <section class="next-section">
+    <h2>Next Section</h2>
+    <p>This is the content of the next section after scrolling past all the cards.</p>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".card");
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // Stop observing once it's visible
+            }
+          });
+        },
+        {
+          threshold: 1, // Trigger animation when 50% of the card is visible
+        }
+      );
+
+      cards.forEach((card) => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

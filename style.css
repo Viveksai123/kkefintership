@@ -731,7 +731,7 @@ body {
   
   /* Primary heading styling */
   .intro-heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 2rem;
     line-height: 1.2;
@@ -804,7 +804,7 @@ body {
   /* Responsive design adjustments */
   @media (max-width: 1024px) {
     .intro-heading {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -827,7 +827,7 @@ body {
     }
 
     .intro-heading {
-      font-size: 2.0rem;
+      font-size: 1rem;
     }
 
     .feature-box {
@@ -841,7 +841,7 @@ body {
 
 /* servies */
 .intro-heading {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 2rem;
   line-height: 1.2;
@@ -1706,7 +1706,85 @@ body1 {
 }
 
 
+/* ARVR */
+.arvr-custom-body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
 
+.arvr-custom-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+  font-weight:semibold;
+}
+
+.arvr-custom-paragraph {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.arvr-custom-active-tab {
+  background-color: linear-gradient(to bottom right, #ffffff, #403f3f00); /* White to black gradient */
+  color: #000000; /* Text color to black on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  
+}
+
+.arvr-custom-inactive-tab {
+  background-color: #1f2937;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.arvr-custom-border {
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .arvr-custom-heading {
+      font-size: 1.3rem;
+  }
+
+  .arvr-custom-paragraph {
+      font-size: 0.9rem;
+  }
+
+  .arvr-custom-btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .arvr-custom-heading {
+      font-size: 1rem;
+  }
+
+  .arvr-custom-paragraph {
+      font-size: 0.85rem;
+  }
+
+  .arvr-custom-btn {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .arvr-row-content {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+  }
+
+  .arvr-custom-btn {
+      font-size: 1.1rem;
+      padding: 0.6rem 1.2rem;
+  }
+}
 
 
 /* trusted  */
@@ -2621,6 +2699,7 @@ ul.no-padding {
 
 .recent-happenings-tab {
   height: 380px !important;
+  
 }
 .recent-happenings-text{
   color: black; 
@@ -2638,7 +2717,7 @@ ul.no-padding {
 
 .blogs-top-section-heading {
   font-size: 38px;
-  font-family: 'Arial', sans-serif; /* Classic font */
+  font-family:roboto; /* Classic font */
   color: #fff; /* White text for the heading */
 }
 
@@ -2646,7 +2725,7 @@ ul.no-padding {
   font-weight: 550;
   font-size: 20px;
   color: #000; /* Dark text for readability inside the card */
-  font-family: 'Georgia', serif; /* Classic serif font for blog titles */
+  font-family: roboto; /* Classic serif font for blog titles */
 }
 
 .blogs-card-text {
@@ -2721,8 +2800,8 @@ ul.no-padding {
 
 .bo-card-body {
   background-color: transparent; 
-  max-height: 350px;
-  min-height: 350px;
+  max-height: 300px;
+  min-height: 300px;
 }
 .bo-card:hover .bo-card-body {
    /* Change the background of bo-card-body when bo-card is hovered */
@@ -2731,6 +2810,10 @@ ul.no-padding {
 }
 
 .custom-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   color: black;
   border: 1px solid black;
@@ -2749,6 +2832,10 @@ ul.no-padding {
   .blogs-card-heading {
     font-size: 20px;
   }
+  .bo-card-body {
+    max-height: 250px;
+    min-height: 250px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2758,6 +2845,10 @@ ul.no-padding {
 
   .blogs-card-heading {
     font-size: 18px;
+  }
+  .bo-card-body {
+    max-height: 250px;
+    min-height: 250px;
   }
 }
 
